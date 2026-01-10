@@ -8,7 +8,8 @@ type Props = {
 export default function CategoryCard({ card }: Props) {
   return (
     <div className="mx-auto w-full max-w-[340px]">
-    <div className="flex flex-col justify-start items-center rounded-2xl border p-4">
+    <div className="flex flex-col justify-start items-center rounded-2xl p-4
+      shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
       <div
         className="
           relative

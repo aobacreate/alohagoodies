@@ -14,8 +14,8 @@ export default function Home() {
         Our Items
       </h1>
 
-      <div className="mx-auto w-full max-w-[768px] px-4 space-y-8 mb-16">
-        <div className="grid gap-x-2 gap-y-8 md:grid-cols-2">
+      <div className="mx-auto w-full max-w-[340px] md:max-w-[720px] px-4 space-y-8 mb-16">
+        <div className="grid gap-x-3 gap-y-8 md:grid-cols-2">
         {categories.map((category) => (
           <CategoryCard
             key={category.slug}
