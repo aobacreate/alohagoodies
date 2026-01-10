@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { Quicksand, Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 
-export const quicksand = Quicksand({
+const quicksand = Quicksand({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-quicksand",
 });
 
-export const notoSansJP = Noto_Sans_JP({
+const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
   variable: "--font-noto-jp",
