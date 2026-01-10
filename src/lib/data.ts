@@ -1,12 +1,5 @@
 // Category
-export type Category = {
-  slug: string;
-  title: string;
-  description: string;
-  image: string;
-};
-
-export const categories: Category[] = [
+export const categories = [
   {
     slug: "accessories",
     title: "Accessories",
@@ -31,7 +24,10 @@ export const categories: Category[] = [
     description: "ハワイの暮らしを感じるアパレル",
     image: "/images/home/cat4.webp",
   },
-];
+] as const;
+
+export type Category = typeof categories[number];
+export type CategorySlug = Category["slug"];
 
 // Section Text
 // src/lib/data.ts
@@ -148,3 +144,38 @@ export const accessoriesProducts: Product[] = [
   },
 ];
 
+// CategoryMap
+export type CategoryData = {
+  sectionText: SectionText;
+  products: Product[];
+};
+
+export type CategoryMap = Record<CategorySlug, CategoryData>;
+
+export const categoryMap: CategoryMap = {
+  "accessories": {
+    sectionText: accessoriesText,
+    products: accessoriesProducts,
+  },
+  "interior-goods": {
+    sectionText: {
+      title: ["自然のぬくもりを、部屋に。"],
+      subtitle: ["Aloha Goodiesのインテリアコレクション"],
+    },
+    products: [], // まだなら空でOK
+  },
+  "kitchen-tableware": {
+    sectionText: {
+      title: ["島の暮らしを、食卓に。"],
+      subtitle: ["Aloha Goodiesのキッチン＆テーブルウェア"],
+    },
+    products: [],
+  },
+  "apparel-fabric": {
+    sectionText: {
+      title: ["ハワイの風を、毎日に。"],
+      subtitle: ["Aloha Goodiesのアパレル＆布小物"],
+    },
+    products: [],
+  },
+};

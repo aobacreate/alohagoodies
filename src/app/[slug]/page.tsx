@@ -1,24 +1,34 @@
 "use client";
 import { useState } from "react";
-
+import { useParams } from "next/navigation";
 import Footer from "@/components/common/Footer";
 import Header from "@/components/common/Header";
 import TagLine from "@/components/common/TagLine";
 import ProductCard from "@/components/product/card";
 import DetailCard from "@/components/product/detail";
-import { accessoriesText, type SectionText } from "@/lib/data";
-import { accessoriesProducts, type Product } from "@/lib/data";
+import { notFound } from "next/navigation";
+import { categoryMap, categories, type CategoryData, type Product } from "@/lib/data";
 
-export default function Accesories() {
+export default function CategoryPage() {
+  const params = useParams();
+  const slug = params.slug as string; 
+  
+  const category = categories.find((c) => c.slug === slug);
+  if (!category) notFound();
+
+  const categoryData = categoryMap[category.slug];
+  const sectionText = categoryData.sectionText;
+  const products = categoryData.products;
+
   const [selectedCard, setSelectedCard] = useState<Product | null>(null);
 
   return (
     <>
       <Header title="Accesories" />
-      <TagLine section={accessoriesText} />
+      <TagLine section={sectionText} />
       <div className="mx-auto w-full max-w-[340px] md:max-w-[720px] px-2 space-y-4 mt-8 mb-16">
         <div className="grid gap-x-2 gap-y-8 grid-cols-2 md:grid-cols-4">
-        {accessoriesProducts.map((card) => (
+        {products.map((card) => (
           <div
             key={card.name}
             onClick={() => setSelectedCard(card)}
