@@ -24,7 +24,7 @@ export default function CategoryPage() {
 
   return (
     <>
-      <Header title="Accesories" />
+      <Header title={category.title} />
       <TagLine section={sectionText} />
       <div className="mx-auto w-full max-w-[340px] md:max-w-[720px] px-2 space-y-4 mt-8 mb-16">
         <div className="grid gap-x-2 gap-y-8 grid-cols-2 md:grid-cols-4">
