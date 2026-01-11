@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aloha Goodies
+Aloha Goodies is a website for an imaginary Hawaiian goods shop created as part of my portfolio.
 
-## Getting Started
+- Responsive design for smartphones and tablets  
+- Built with Next.js and Tailwind CSS  
+- Deployed on Vercel
 
-First, run the development server:
+## 🔗 Live URL
+- [Website (Vercel)](https://alohagoodies.vercel.app)
+- [Daily Log](https://aobacreate.net/aloha-goodies-next-js-complete/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛠 Technologies Used
+- Next.js
+- Tailwind CSS
+- TypeScript
+- Vercel
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📱 Implementation & Key Features
+- The top page displays four categories, each linking to its own category page.
+- Each category page contains six items.
+- Items are clickable and open a detail view.
+- The top page includes a hamburger menu with links to Search and Contact pages.
+- The search page displays all items and allows filtering by category using checkboxes.
+- The header includes a logo icon that links back to the top page.
+- Product data is managed as static TypeScript files instead of using a database.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎨 Design
+- Designed using Figma
+- The design is a rough draft, and the final design was refined during implementation.
+- [Figma](https://www.figma.com/design/chZowQDGgN929FDGKQVxXt/-%E5%85%AC%E9%96%8B%E7%94%A8-alohagoddies?node-id=7-2&t=Kf3XusTxDErtpNex-1)
