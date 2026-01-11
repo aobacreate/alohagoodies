@@ -28,3 +28,11 @@ Aloha Goodies is a website for an imaginary Hawaiian goods shop created as part 
 - Designed using Figma
 - The design is a rough draft, and the final design was refined during implementation.
 - [Figma](https://www.figma.com/design/chZowQDGgN929FDGKQVxXt/-%E5%85%AC%E9%96%8B%E7%94%A8-alohagoddies?node-id=7-2&t=Kf3XusTxDErtpNex-1)
+
+## Screenshots
+
+### Home
+![Home](./screenshots/top.png)
+
+### Category
+![Category](./screenshots/accessories.png)
